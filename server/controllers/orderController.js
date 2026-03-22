@@ -870,9 +870,6 @@ export const processRefund = async (req, res, next) => {
     const paymentIntentId = req.body.paymentIntentId || order.paymentIntentId;
     const isDemoPayment = typeof order.paymentReference === 'string' && order.paymentReference.startsWith('DEMO-');
     if (paymentIntentId && !isDemoPayment) {
-      if (!stripe) {
-        return res.status(500).json({ message: 'Stripe is not configured on server' });
-      }
       await stripe.refunds.create({ payment_intent: paymentIntentId });
     }
 
