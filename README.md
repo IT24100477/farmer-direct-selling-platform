@@ -3,7 +3,7 @@
 Full-stack demo implementing farmer-to-customer direct sales with role-based access, Stripe test payments, Cloudinary uploads, and real-time notifications via Socket.io.
 
 ## Tech
-- MongoDB, Mongoose database
+- MongoDB, Mongoose database test1
 - Express.js, Node.js
 - JWT auth + refresh, RBAC middleware
 - Stripe test integration
